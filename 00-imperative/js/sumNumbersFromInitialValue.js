@@ -7,3 +7,15 @@
  */
 
 const NUMBERS = [1, 2, 3, 4, 5];
+
+export const sumNumbersFromInitialValue = function (initial) {
+  let sum = initial;
+
+  const collectionLength = NUMBERS.length;
+
+  for (let index = 0; index < collectionLength; index++) {
+    sum += NUMBERS[index];
+  }
+
+  return sum;
+};

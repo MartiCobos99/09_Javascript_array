@@ -24,7 +24,7 @@ The `map()` method creates a new array populated with the results of calling a p
 
 #### Parameters
 
-- callbackFn: `(element, index, array) => {//...}`
+<a- callbackFn: `(element, index, array) => {//...}`
 - thisArg: A value to use as this when executing `callbackFn` | (optional)
 
 #### Return

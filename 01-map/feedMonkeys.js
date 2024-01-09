@@ -7,3 +7,7 @@
  */
 
 const MONKEYS = ["🐒", "🦍", "🦧"];
+
+export const feedMonkeys = function (fruit) {
+  return MONKEYS.map((monkey) => `${monkey} ${fruit}`);
+};
