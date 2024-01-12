@@ -4,7 +4,7 @@ describe("Given getLongWords", () => {
   test("When LANGUAGES array is provided Then expected array should be returned", () => {
     //arrange
     const words = ["Java", "C++", "JavaScript", "C#", "TypeScript"];
-    const EXPECTED_RESULT = ['JavaScript', 'TypeScript'];
+    const EXPECTED_RESULT = ["JavaScript", "TypeScript"];
 
     //act
     const longLanguages = getLongWords(words);
@@ -16,7 +16,7 @@ describe("Given getLongWords", () => {
 
   test("When BEATLES array is provided Then expected array should be returned", () => {
     //arrange
-    const EXPECTED_RESULT = ['George', 'Ringo'];
+    const EXPECTED_RESULT = ["George", "Ringo"];
     const words = ["John", "George", "Paul", "Ringo"];
     //act
     const longBeatles = getLongWords(words);
