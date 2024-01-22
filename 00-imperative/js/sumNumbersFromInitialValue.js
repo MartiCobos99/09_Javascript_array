@@ -6,4 +6,16 @@
  * expected with initial as 10: 25
  */
 
-const NUMBERS = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
+
+export const sumNumbersFromInitialValue = (initialNumber) => {
+  const numbersLength = numbers.length;
+
+  let sum = initialNumber;
+
+  for (let index = 0; index < numbersLength; index++) {
+    sum += numbers[index];
+  }
+
+  return sum;
+};
