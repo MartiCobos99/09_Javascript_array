@@ -1,28 +1,23 @@
-import { getLongWords } from "./getLongWords";
+import { filterLongWords } from "./filterLongWords.js";
 
-describe("Given getLongWords", () => {
-  test("When LANGUAGES array is provided Then expected array should be returned", () => {
-    //arrange
-    const words = ["Java", "C++", "JavaScript", "C#", "TypeScript"];
+describe("Given filterLongWords", () => {
+  test("When array equals to: ['Java', 'C++', 'JavaScript', 'C#', 'TypeScript'], then expected value should be returned", () => {
+    const WORDS = ["Java", "C++", "JavaScript", "C#", "TypeScript"];
     const EXPECTED_RESULT = ["JavaScript", "TypeScript"];
 
-    //act
-    const longLanguages = getLongWords(words);
+    const longLanguages = filterLongWords(WORDS);
 
-    //assert
     expect(longLanguages).toBeDefined();
     expect(longLanguages).toEqual(EXPECTED_RESULT);
   });
 
-  test("When BEATLES array is provided Then expected array should be returned", () => {
-    //arrange
+  test("When ['John', 'George', 'Paul', 'Ringo'] is provided as argument, then expected array should be returned", () => {
+    const BEATLES = ["John", "George", "Paul", "Ringo"];
     const EXPECTED_RESULT = ["George", "Ringo"];
-    const words = ["John", "George", "Paul", "Ringo"];
-    //act
-    const longBeatles = getLongWords(words);
 
-    //assert
-    expect(longBeatles).toBeDefined();
-    expect(longBeatles).toEqual(EXPECTED_RESULT);
+    const result = filterLongWords(BEATLES);
+
+    expect(result).toBeDefined();
+    expect(result).toEqual(EXPECTED_RESULT);
   });
 });

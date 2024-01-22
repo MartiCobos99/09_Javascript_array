@@ -7,7 +7,7 @@
 const SECONDS = [2, 5, 100];
 
 function transformSecondsToWords(seconds) {
-  return seconds.map(String);
+  return seconds.map((number) => number.toString());
 }
 
 module.exports = transformSecondsToWords;

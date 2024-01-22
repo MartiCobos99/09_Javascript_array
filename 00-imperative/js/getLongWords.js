@@ -1,24 +1,24 @@
 /**
- * Given 'WORDS' array, define function 'getLongWords' to return an array only with strings with length equal or greater than 5
- * use for() instruction
- *
- * expected LANGUAGES: ['JavaScript', 'TypeScript']
- * expected BEATLES: ["George", "Ringo"];
- */
 
+Define the function 'filterLongWords' that takes an array of strings and returns a new array containing only the strings with a length equal to or greater than 5.
+Use a for loop for the iteration.
+Expected LANGUAGES: ['JavaScript', 'TypeScript']
+Expected BEATLES: ["George", "Ringo"];
+*/
 const LANGUAGES = ["Java", "C++", "JavaScript", "C#", "TypeScript"];
 const BEATLES = ["John", "George", "Paul", "Ringo"];
 
-export const getLongWords = function (words) {
-  const longWords = [];
-  const collectionLength = words.length;
+export const filterLongWords = function (inputWords) {
+  const resultWords = [];
 
-  for (let index = 0; index < collectionLength; index++) {
-    const word = words[index];
-    if (word.length >= 5) {
-      longWords.push(word);
+  const totalWords = inputWords.length;
+
+  for (let i = 0; i < totalWords; i++) {
+    if (inputWords[i].length >= 5) {
+      const currentWord = inputWords[i];
+      resultWords.push(currentWord);
     }
   }
 
-  return longWords;
+  return resultWords;
 };

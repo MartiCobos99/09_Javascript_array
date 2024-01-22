@@ -1,6 +1,14 @@
-const capitalizeMates = require("./capitalizeMates");
+import { capitalizeNames } from "./capitalizeNames.js";
 
-test("capitalizeMates should capitalize names in the MATES array", () => {
-  const result = capitalizeMates(["john", "JACOB", "jinGleHeimer", "schmidt"]);
-  expect(result).toEqual(["John", "Jacob", "Jingleheimer", "Schmidt"]);
+describe("Given capitalizeNames", () => {
+  test("When capitalizing MATES array, then the result should have capitalized names", () => {
+    const mates = ["john", "JACOB", "jinGleHeimer", "schmidt"];
+    const expectedResult = ["John", "Jacob", "Jingleheimer", "Schmidt"];
+
+    const matesCapitalized = capitalizeNames(mates);
+
+    expect(matesCapitalized).toBeDefined();
+    expect(matesCapitalized.length).toEqual(4);
+    expect(matesCapitalized).toEqual(expectedResult);
+  });
 });

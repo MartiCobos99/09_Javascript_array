@@ -1,9 +1,3 @@
-/**
- * Define 'extendUsersSettings' to extend users properties
- * Add property 'id' with index value
- * Add property 'isEnabled' as true
- */
-
 const USERS = [
   {
     email: "lindsay.ferguson@reqres.in",
@@ -25,12 +19,19 @@ const USERS = [
   },
 ];
 
-function extendUsersSettings(users) {
-  return users.map((user, index) => ({
-    ...user,
-    id: index,
-    isEnabled: true,
-  }));
-}
+/**
+ * Define 'extendUsersSettings' to extend users properties
+ * Add property 'id' with index value
+ * Add property 'isEnabled' as true
+ */
 
-module.exports = extendUsersSettings;
+export const extendUsersSettings = () => {
+  const extendedUsers = USERS.map((user, index) => {
+    return {
+      ...user,
+      id: index,
+      isEnabled: true,
+    };
+  });
+  return extendedUsers;
+};

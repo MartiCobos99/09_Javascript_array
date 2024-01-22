@@ -1,15 +1,14 @@
 /**
- * Given MATES array, define function 'capitalizeMates' to return an array of strings with capitalized names
+ * Define the function 'capitalizeNames' that takes an array of strings and returns a new array with capitalized names.
  *
- * expected: ["John", "Jacob", "Jingleheimer", "Schmidt"]
+ * Expected: ["John", "Jacob", "Jingleheimer", "Schmidt"]
  */
 
 const MATES = ["john", "JACOB", "jinGleHeimer", "schmidt"];
 
-function capitalizeMates(names) {
-  return names.map(
-    (name) => name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(),
-  );
-}
-
-module.exports = capitalizeMates;
+export const capitalizeNames = (names) => {
+  const capitalizedNames = names.map((name) => {
+    return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+  });
+  return capitalizedNames;
+};
